@@ -1,8 +1,8 @@
 function sameFrequency(num1, num2) {
   if (num1 === num2) return true;
 
-  let numArr1 = num1.toString().split('');
-  let numArr2 = num2.toString().split('');
+  let numArr1 = num1.toString();
+  let numArr2 = num2.toString();
   let numObj1 = {};
   let numObj2 = {};
 
