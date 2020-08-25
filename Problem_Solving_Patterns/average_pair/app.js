@@ -9,9 +9,7 @@ function averagePair(arr, avg) {
 
     if (pairAvg === avg) return true;
 
-    if (pairAvg < avg) { i++; }
-
-    if (pairAvg > avg) { j--; }
+    pairAvg < avg ? i++ : j--;
   }
 
   return false;
