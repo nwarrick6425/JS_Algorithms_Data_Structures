@@ -6,7 +6,7 @@ function pivot(arr, start=0, end=arr.length - 1) {
   }
 
   let pivot = arr[start];
-  let swapIdx = 0;
+  let swapIdx = start;
 
   for (let i = start + 1; i < arr.length; i++) {
     if (pivot > arr[i]) {
@@ -19,3 +19,14 @@ function pivot(arr, start=0, end=arr.length - 1) {
 
   return swapIdx;
 }
+
+function quickSort (arr, left = 0, right = arr.length - 1) {
+  if (left < right) {
+    let pivotIndex = pivot(arr, left, right);
+    quickSort(arr, left, pivotIndex - 1);
+    quickSort(arr, pivotIndex + 1, right);
+  }
+  return arr;
+}
+
+console.log(quickSort([3,21,5,3,66,7,8,3,-1,-55,-3]));
