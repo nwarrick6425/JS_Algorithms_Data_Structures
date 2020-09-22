@@ -72,9 +72,7 @@ class SinglyLinkedList {
 }
 
 let list = new SinglyLinkedList();
-list.push(1);
-list.push(2);
-list.push(3);
+list.push(1).push(2).push(3);
 console.log(list);
 list.pop();
 list.pop();
