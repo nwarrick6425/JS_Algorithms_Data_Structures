@@ -1,0 +1,25 @@
+{
+  "name": "js_algorithms_data_structures",
+  "version": "1.0.0",
+  "description": "Repo to store all my algorithms from Colt Steele's JS Algorithms and Data Structures Masterclass",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nwarrick6425/JS_Algorithms_Data_Structures.git"
+  },
+  "author": "Nicholai Dudakiw-Warrick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nwarrick6425/JS_Algorithms_Data_Structures/issues"
+  },
+  "homepage": "https://github.com/nwarrick6425/JS_Algorithms_Data_Structures#readme",
+  "devDependencies": {
+    "chai": "^4.2.0"
+  }
+}
