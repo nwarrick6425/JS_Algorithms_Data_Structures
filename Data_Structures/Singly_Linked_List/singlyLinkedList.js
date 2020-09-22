@@ -1,17 +1,4 @@
-/**
- * Simple class to represent node in singly linked list
- * 
- */
-class Node {
-  constructor(val) {
-    this.val = val;
-    this.next = null;
-  }
-}
-
-/**
- * @typedef {Object} Node
- */
+const Node = require('./node');
 
 /**
  * Singly Linked List Class & Methods
@@ -71,10 +58,4 @@ class SinglyLinkedList {
   }
 }
 
-let list = new SinglyLinkedList();
-list.push(1).push(2).push(3);
-console.log(list);
-list.pop();
-list.pop();
-list.pop();
-console.log(list);
+module.exports = SinglyLinkedList;
