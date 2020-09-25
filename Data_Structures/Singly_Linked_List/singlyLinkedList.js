@@ -23,6 +23,9 @@ class SinglyLinkedList {
     if (!this.head) {
       this.head = item;
       this.tail = item;
+      this.length++;
+
+      return this;
     }
 
     this.tail.next = item;
