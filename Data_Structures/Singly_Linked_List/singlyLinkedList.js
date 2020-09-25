@@ -23,13 +23,11 @@ class SinglyLinkedList {
     if (!this.head) {
       this.head = item;
       this.tail = item;
-      this.length++;
-
-      return this;
     }
-
-    this.tail.next = item;
-    this.tail = item;
+    else {
+      this.tail.next = item;
+      this.tail = item;
+    }
     this.length++;
 
     return this;
@@ -58,6 +56,37 @@ class SinglyLinkedList {
     this.length--;
 
     return cur;
+  }
+
+  shift() {
+    if (!this.length) return undefined;
+
+    let curHead = this.head;
+    this.head = curHead.next;
+    this.length--;
+
+    if(this.length === 0) this.tail = null;
+
+    return curHead;
+  }
+
+  unshift(val) {
+    let item = new Node(val);
+
+    // If list is empty, set new node to head/tail
+    if (!this.head) {
+      this.head = item;
+      this.tail = item;
+    }
+    // Else set item next to the current head and
+    // the head to the current node
+    else {
+      item.next = this.head;
+      this.head = item;
+    }
+    this.length++;
+
+    return this;
   }
 }
 
