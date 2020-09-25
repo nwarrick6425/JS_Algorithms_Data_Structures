@@ -88,6 +88,30 @@ class SinglyLinkedList {
 
     return this;
   }
+
+  get(index) {
+    if (index < 0 || index >= this.length) return null;
+
+    let curHead = this.head;
+    let counter = 0;
+
+    while(counter !== index) {
+      curHead = curHead.next;
+      counter++;
+    }
+
+    return curHead;
+  }
+
+  set(index, val) {
+    let foundNode = this.get(index);
+    if (foundNode) {
+      foundNode.val = val;
+      return true;
+    }
+
+    return false;
+  }
 }
 
 module.exports = SinglyLinkedList;
