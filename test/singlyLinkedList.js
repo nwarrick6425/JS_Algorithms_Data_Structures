@@ -3,14 +3,27 @@ let expect = require('chai').expect;
 let list, curTail, curLength, poppedTail;
 
 describe('#push()', function() {
-  
+
   context('with no items', function() {
     beforeEach(function() {
       list = new SinglyLinkedList();
+      list.push(1);
     })
 
-    it('should', function() {
+    it('should set head to pushed item', function() {
+      expect(list.head.val).to.equal(1);
+    })
 
+    it('should set tail to pushed item', function () {
+      expect(list.tail.val).to.equal(1);
+    })
+
+    it('should increase length by 1', function() {
+      expect(list.length).to.equal(1);
+    })
+
+    it('pushed node has a next value of null', function() {
+      expect(list.tail.next).to.equal(null);
     })
   })
 })
